@@ -77,7 +77,7 @@
     }
   }
 
-  window.addEventListener('load', () => {
+  document.addEventListener('DOMContentLoaded', () => {
     requestAnimationFrame(revealChars);
   });
 })();
