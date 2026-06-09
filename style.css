@@ -551,13 +551,13 @@ nav::before {
 }
 .team-feature-icon svg { width: 20px; height: 20px; }
 .team-feature-text h4 {
-  font-size: 14px;
+  font-size: clamp(14px, 1.1vw, 16px);
   font-weight: 700;
   color: var(--color-text-default);
   margin-bottom: 4px;
 }
 .team-feature-text p {
-  font-size: 13px;
+  font-size: clamp(13px, 1vw, 15px);
   color: #888;
   line-height: 1.6;
 }
