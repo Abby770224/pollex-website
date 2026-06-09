@@ -166,11 +166,12 @@ nav::before {
   margin: 0 auto;
   padding: 0 var(--spacing-09);
   display: flex; align-items: center; justify-content: space-between;
-  gap: 40px;
+  gap: clamp(20px, 3vw, 60px);
 }
 .hero-text {
-  flex: 0 0 auto;
-  max-width: 860px;
+  flex: 1 1 auto;
+  max-width: 700px;
+  min-width: 0;
   margin-top: -80px;
 }
 
@@ -194,13 +195,13 @@ nav::before {
 .hero-text h1 .highlight { color: var(--color-secondary); }
 .hero-text p:not(.hero-sub):not(.hero-subtitle--yellow),
 .hero-subtitle:not(.hero-subtitle--yellow) {
-  font-size: 18px;
+  font-size: clamp(15px, 1.2vw, 18px);
   color: rgba(255,255,255,0.88);
   margin-top: var(--spacing-06);
   line-height: 1.6;
 }
 .hero-subtitle--yellow {
-  font-size: 18px;
+  font-size: clamp(15px, 1.2vw, 18px);
   color: var(--color-secondary);
   margin-top: var(--spacing-06);
   line-height: 1.6;
@@ -210,7 +211,7 @@ nav::before {
   margin-top: var(--spacing-09);
   background: var(--color-secondary);
   color: var(--color-text-default);
-  font-weight: 700; font-size: 15px;
+  font-weight: 700; font-size: clamp(14px, 1.1vw, 16px);
   padding: 12px 28px;
   border-radius: var(--radius-xl);
   box-shadow: 0 4px 16px rgba(255,208,33,0.4);
@@ -221,9 +222,10 @@ nav::before {
   box-shadow: 0 8px 24px rgba(255,208,33,0.5);
 }
 .hero-visual {
-  flex: 0 0 auto;
-  width: clamp(280px, 38vw, 500px);
+  flex: 0 0 clamp(260px, 36vw, 480px);
+  min-width: clamp(260px, 36vw, 480px);
   position: relative;
+  overflow: visible;
 }
 
 .hero,
@@ -252,7 +254,7 @@ nav::before {
 .section-inner { max-width: 1000px; margin: 0 auto; }
 .section-title {
   text-align: center;
-  font-size: clamp(20px, 2.5vw, 28px);
+  font-size: clamp(22px, 2vw, 32px);
   font-weight: 700;
   color: var(--color-text-default);
   position: relative;
@@ -280,7 +282,7 @@ nav::before {
 }
 
 .values-desc {
-  text-align: left; font-size: 16px; color: #666; line-height: 1.8;
+  text-align: left; font-size: clamp(14px, 1.1vw, 16px); color: #666; line-height: 1.8;
   max-width: 680px; margin: 0 auto var(--spacing-09);
 }
 .values-grid {
@@ -360,8 +362,8 @@ nav::before {
   position: relative;
   z-index: 1;
 }
-.value-card h3 { font-size: 18px; font-weight: 700; color: var(--color-text-default); }
-.value-card p { font-size: 16px; color: #666; line-height: 1.7; }
+.value-card h3 { font-size: clamp(16px, 1.3vw, 20px); font-weight: 700; color: var(--color-text-default); }
+.value-card p { font-size: clamp(14px, 1.1vw, 16px); color: #666; line-height: 1.7; }
 
 /* ════════════════════════════
    Products — GSAP pin stack scroll
@@ -442,13 +444,13 @@ nav::before {
   display: block;
 }
 .card-text h3 {
-  font-size: 22px;
+  font-size: clamp(18px, 1.6vw, 24px);
   font-weight: 700;
   color: var(--color-text-default);
   line-height: 1.3;
 }
 .card-text p {
-  font-size: 14px;
+  font-size: clamp(13px, 1vw, 15px);
   color: #666;
   line-height: 1.9;
 }
@@ -500,7 +502,7 @@ nav::before {
 .team .section-title { margin-bottom: 16px; }
 .team-desc {
   text-align: center;
-  font-size: 15px;
+  font-size: clamp(14px, 1.1vw, 16px);
   color: #666;
   line-height: 1.8;
   max-width: 680px;
