@@ -582,13 +582,13 @@ nav::before {
   background: var(--color-bg-white);
   box-shadow: 0 2px 12px rgba(56,106,166,0.10);
   display: flex; align-items: center; justify-content: center;
-  color: var(--color-primary);
+  color: var(--color-text-highlight);
 }
 .team-stat-icon svg { width: 22px; height: 22px; }
 .team-stat-num {
   font-size: 32px;
   font-weight: 800;
-  color: var(--color-primary);
+  color: var(--color-text-highlight);
   line-height: 1;
   font-family: 'Montserrat', sans-serif;
 }

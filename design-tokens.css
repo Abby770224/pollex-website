@@ -11,8 +11,9 @@
      ════════════════════════════ */
   --color-text-default:         #353333;   /* 主要文字色 */
   --color-text-colored:         #5B9DEB;   /* 主品牌色文字 */
-  --color-text-highlight:       #FA8034;   /* 強調文字色 */
+  --color-text-highlight:       #E0A800;   /* 強調文字色 */
   --color-text-light:           #FFFFFF;   /* 淺色背景上的文字 */
+  
 
   /* ════════════════════════════
      Background Color
