@@ -1,0 +1,61 @@
+:root {
+  /* ════════════════════════════
+     Brand Color
+     ════════════════════════════ */
+  --color-primary:              #5B9DEB;   /* 主品牌色，按鈕／互動／選取 */
+  --color-secondary:            #FFD021;   /* 次要色，強調互動 */
+  --color-tertiary:             #8C7CDA;   /* 第三品牌色，分段選擇 */
+
+  /* ════════════════════════════
+     Text Color
+     ════════════════════════════ */
+  --color-text-default:         #353333;   /* 主要文字色 */
+  --color-text-colored:         #5B9DEB;   /* 主品牌色文字 */
+  --color-text-highlight:       #FA8034;   /* 強調文字色 */
+  --color-text-light:           #FFFFFF;   /* 淺色背景上的文字 */
+
+  /* ════════════════════════════
+     Background Color
+     ════════════════════════════ */
+  --color-bg-white:             #FFFFFF;   /* 白色背景 */
+  --color-bg-light-blue:        #ECF3FF;   /* 淡藍背景 */
+  --color-bg-dark-blue:         #3E53A8;   /* 深藍色背景 */
+
+  /* ════════════════════════════
+     Status Color
+     ════════════════════════════ */
+  --color-status-warn:          #FF8600;   /* 警示色 */
+  --color-status-error:         #F14B35;   /* 錯誤色 */
+  --color-status-success:       #00C247;   /* 成功色 */
+
+  /* ════════════════════════════
+     Border Radius
+     ════════════════════════════ */
+  --radius-sm:                  8px;       /* Input frame */
+  --radius-lg:                  16px;      /* Block 圓角 */
+  --radius-xl:                  999px;     /* 大圓角 / pill 按鈕 */
+
+  /* ════════════════════════════
+     Shadow
+     ════════════════════════════ */
+  --shadow-brand:               0 4px 10px 0 rgba(56, 106, 166, 0.25);
+
+  /* ════════════════════════════
+     Spacing
+     ════════════════════════════ */
+  --spacing-00:                 0px;        /* Side bar button */
+  --spacing-01:                 2px;        /* 標籤與必填 * 之間 */
+  --spacing-02:                 4px;        /* 標籤與元件之間 */
+  --spacing-03:                 8px;        /* Icon 與 Text 間距 */
+  --spacing-04:                 10px;       /* Field mix input 間距 */
+  --spacing-05:                 12px;       /* Input 左右 padding */
+  --spacing-06:                 16px;       /* 段落大標題下方物件間距 */
+  --spacing-07:                 24px;       /* 主要間距 */
+  --spacing-08:                 32px;       /* 留白 */
+  --spacing-09:                 40px;       /* 上下物件邊距 */
+  --spacing-10:                 48px;       /* 留白 */
+  --spacing-11:                 64px;       /* 網頁版章節間行距 */
+  --spacing-12:                 80px;       /* 手機版段落間距 */
+  --spacing-13:                 84px;       /* iPad 版落版間距 */
+  --spacing-14:                 160px;      /* 網頁版段落間距 */
+}
