@@ -35,7 +35,7 @@ nav::before {
 }
 .nav-logo { display: flex; align-items: center; text-decoration: none; }
 .nav-logo svg { height: 36px; width: auto; display: block; }
-.nav-links { display: flex; gap: var(--spacing-08); font-size: 14px; font-weight: 500; }
+.nav-links { display: flex; gap: var(--spacing-08); font-size: clamp(14px, 1.1vw, 15px); font-weight: 500; }
 .nav-links a {
   color: var(--color-text-default);
   transition: color .2s;
@@ -45,13 +45,13 @@ nav::before {
   content: '';
   position: absolute; bottom: -2px; left: 0;
   width: 100%; height: 2px;
-  background: #F29600;
+  background: var(--color-primary);
   border-radius: 2px;
   transform: scaleX(0);
   transform-origin: left center;
   transition: transform .2s ease;
 }
-.nav-links a:hover { color: #F29600; }
+.nav-links a:hover { color: var(--color-primary); }
 .nav-links a:hover::after { transform: scaleX(1); }
 .nav-contact {
   background: var(--color-primary);
@@ -81,7 +81,7 @@ nav::before {
 .nav-dropdown {
   position: absolute; top: calc(100% + 20px); left: 50%;
   transform: translateX(-50%);
-  background: #F29600;
+  background: var(--color-bg-white);
   border-radius: var(--radius-lg);
   box-shadow: 0 8px 32px rgba(250,131,52,0.25), 0 2px 8px rgba(0,0,0,0.08);
   border: none;
@@ -98,7 +98,8 @@ nav::before {
   position: absolute; top: -6px; left: 50%;
   transform: translateX(-50%);
   width: 12px; height: 12px;
-  background: #F29600;
+  background: var(--color-bg-white);
+  box-shadow: 0 8px 32px rgba(250,131,52,0.25), 0 2px 8px rgba(0,0,0,0.08);
   border: none;
   clip-path: polygon(0 100%, 100% 0, 0 0);
   rotate: 45deg;
@@ -112,19 +113,24 @@ nav::before {
   display: block;
   padding: 10px 20px;
   font-size: 13px; font-weight: 500;
-  color: #FFFFFF;
+  color: var(--color-text-highlight);
   white-space: nowrap;
 }
+
+.nav-dropdown a::after {
+  content: none;
+}
+
 .nav-dropdown a span {
   position: relative;
   display: inline-block;
-  color: #FFFFFF;
+  color: var(--color-text-default);
 }
 .nav-dropdown a span::after {
   content: '';
   position: absolute; bottom: -2px; left: 0;
   width: 100%; height: 2px;
-  background: #FFFFFF;
+  background: var(--color-text-highlight);
   border-radius: 2px;
   transform: scaleX(0);
   transform-origin: left center;
@@ -1257,7 +1263,6 @@ footer strong { color: #fff; font-weight: 400; }
     text-decoration: none;
 
     background: transparent;
-    border-top: 1px solid rgba(91, 157, 235, 0.10);
   }
 
   .mobile-sub-item:hover {

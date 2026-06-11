@@ -1,0 +1,377 @@
+/* ════════════════════════════════════════════════
+   about.css — 沿用首頁 design token，僅補必要樣式
+   ════════════════════════════════════════════════ */
+
+/* ── nav active 狀態 ── */
+.nav-current { color: var(--color-primary) !important; }
+
+/* ────────────────────────────
+   內頁 Hero
+   ──────────────────────────── */
+.about-hero {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  background: linear-gradient(135deg, #3E53A8 0%, #5B9DEB 55%, #8fc5f5 100%);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 64px;
+}
+.about-hero::after {
+  content: '';
+  position: absolute;
+  width: 480px; height: 480px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 40%,
+    rgba(255,255,255,0.08) 0%, transparent 70%);
+  right: -120px; bottom: -120px;
+  pointer-events: none;
+}
+.about-hero-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--spacing-06);
+}
+.about-hero-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.7);
+}
+.about-hero-title {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: clamp(26px, 3.2vw, 48px);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.3;
+}
+.about-hero-sub {
+  font-size: clamp(14px, 1.2vw, 17px);
+  color: rgba(255,255,255,0.82);
+  line-height: 1.9;
+}
+
+/* ────────────────────────────
+   公司介紹
+   ──────────────────────────── */
+.about-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-11);
+  align-items: start;
+}
+.about-left-title {
+  font-size: clamp(22px, 2vw, 32px);
+  font-weight: 700;
+  color: var(--color-text-default);
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.about-left-title::after {
+  content: '';
+  display: block;
+  width: 48px; height: 3px;
+  background: var(--color-primary);
+  border-radius: 2px;
+  margin-top: 8px;
+}
+.about-intro-text p {
+  font-size: clamp(14px, 1.1vw, 16px);
+  color: #555;
+  line-height: 1.9;
+  margin-bottom: var(--spacing-06);
+}
+.about-intro-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-06);
+}
+.about-stat-card {
+  background: var(--color-bg-light-blue);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-07);
+  text-align: center;
+  box-shadow: var(--shadow-brand);
+  transition: transform .2s;
+}
+.about-stat-card:hover { transform: translateY(-3px); }
+.about-stat-num {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(28px, 3vw, 40px);
+  font-weight: 800;
+  color: var(--color-primary);
+  line-height: 1;
+}
+.about-stat-unit { font-size: clamp(18px, 1.8vw, 24px); font-weight: 700; }
+.about-stat-label {
+  font-size: clamp(12px, 1vw, 14px);
+  color: #666;
+  margin-top: var(--spacing-02);
+}
+
+/* ────────────────────────────
+   交替背景
+   ──────────────────────────── */
+.about-alt-bg { background: var(--color-bg-light-blue); }
+
+/* ────────────────────────────
+   共用 section desc
+   ──────────────────────────── */
+.about-section-desc {
+  text-align: center;
+  font-size: clamp(14px, 1.1vw, 16px);
+  color: #666;
+  line-height: 1.8;
+  max-width: 640px;
+  margin: 0 auto var(--spacing-09);
+}
+
+/* ────────────────────────────
+   團隊 — card icon
+   ──────────────────────────── */
+.about-card-icon {
+  width: 52px; height: 52px;
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-light-blue);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-primary);
+}
+.about-card-icon svg { width: 26px; height: 26px; }
+
+/* ────────────────────────────
+   里程碑 Timeline
+   ──────────────────────────── */
+.about-timeline {
+  position: relative;
+  max-width: 720px;
+  margin: 0 auto;
+  padding-left: 120px;
+}
+.about-timeline::before {
+  content: '';
+  position: absolute;
+  left: 104px; top: 8px; bottom: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-primary) 0%, rgba(91,157,235,0.15) 100%);
+  border-radius: 2px;
+}
+.about-timeline-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-07);
+  margin-bottom: var(--spacing-09);
+  position: relative;
+}
+.about-timeline-item:last-child { margin-bottom: 0; }
+.about-timeline-side {
+  position: absolute;
+  left: -120px;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-05);
+  width: 120px;
+  justify-content: flex-end;
+}
+.about-timeline-year {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-primary);
+  white-space: nowrap;
+}
+.about-timeline-year--now { color: var(--color-secondary); }
+.about-timeline-dot {
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2.5px solid var(--color-primary);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  margin-right: -6px;
+}
+.about-timeline-dot--now {
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 4px rgba(255,208,33,0.25);
+}
+.about-timeline-content {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-07) var(--spacing-08);
+  box-shadow: var(--shadow-brand);
+  flex: 1;
+  transition: transform .2s, box-shadow .2s;
+}
+.about-timeline-content:hover {
+  transform: translateX(4px);
+  box-shadow: 0 8px 24px rgba(56,106,166,0.18);
+}
+.about-timeline-content h4 {
+  font-size: clamp(15px, 1.2vw, 17px);
+  font-weight: 700;
+  color: var(--color-text-default);
+  margin-bottom: var(--spacing-02);
+}
+.about-timeline-content p {
+  font-size: clamp(13px, 1vw, 15px);
+  color: #666;
+  line-height: 1.7;
+}
+
+/* ────────────────────────────
+   加入我們
+   ──────────────────────────── */
+.about-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-07);
+}
+.about-job-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-08);
+  box-shadow: var(--shadow-brand);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-06);
+  transition: transform .2s, box-shadow .2s;
+}
+.about-job-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(56,106,166,0.2);
+}
+.about-job-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-06);
+}
+.about-job-icon {
+  width: 44px; height: 44px;
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-light-blue);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+.about-job-icon svg { width: 22px; height: 22px; }
+.about-job-header h3 {
+  font-size: clamp(15px, 1.2vw, 18px);
+  font-weight: 700;
+  color: var(--color-text-default);
+}
+.about-job-list {
+  list-style: none;
+  padding: 0; margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-02);
+  flex: 1;
+}
+.about-job-list li {
+  font-size: clamp(13px, 1vw, 15px);
+  color: #666;
+  line-height: 1.6;
+  padding-left: var(--spacing-06);
+  position: relative;
+}
+.about-job-list li::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 9px;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  opacity: 0.5;
+}
+.about-job-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--spacing-04) var(--spacing-07);
+  background: var(--color-bg-light-blue);
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: var(--radius-xl);
+  text-decoration: none;
+  align-self: flex-start;
+  transition: background .2s, color .2s;
+}
+.about-job-btn:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* ────────────────────────────
+   聯絡 CTA
+   ──────────────────────────── */
+.about-cta-section {
+  background: linear-gradient(135deg, #3E53A8 0%, #5B9DEB 100%);
+  padding: var(--spacing-12) var(--spacing-09);
+  text-align: center;
+}
+.about-cta-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-06);
+}
+.about-cta-title {
+  font-size: clamp(24px, 2.8vw, 40px);
+  font-weight: 800;
+  color: #fff;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+.about-cta-sub {
+  font-size: clamp(14px, 1.2vw, 17px);
+  color: rgba(255,255,255,0.82);
+  line-height: 1.9;
+}
+.about-cta-btns {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-07);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: var(--spacing-06);
+}
+.about-cta-ghost {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px var(--spacing-08);
+  border: 2px solid rgba(255,255,255,0.5);
+  border-radius: var(--radius-xl);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: border-color .2s, background .2s;
+}
+.about-cta-ghost:hover {
+  border-color: #fff;
+  background: rgba(255,255,255,0.12);
+}
+
+/* ────────────────────────────
+   RWD
+   ──────────────────────────── */
+@media (max-width: 900px) {
+  .about-hero        { height: auto; padding: 100px var(--spacing-07) var(--spacing-10); }
+  .about-intro-grid  { grid-template-columns: 1fr; gap: var(--spacing-09); }
+  .about-jobs-grid   { grid-template-columns: 1fr; }
+  .about-timeline    { padding-left: 80px; }
+  .about-timeline::before { left: 68px; }
+  .about-timeline-side    { left: -80px; width: 80px; }
+  .about-timeline-year    { font-size: 12px; }
+}
+@media (max-width: 600px) {
+  .about-intro-stats { grid-template-columns: 1fr 1fr; }
+  .about-timeline    { padding-left: 60px; }
+  .about-timeline::before { left: 50px; }
+  .about-timeline-side    { left: -60px; width: 60px; }
+  .about-timeline-year    { font-size: 11px; }
+  .about-cta-btns    { flex-direction: column; }
+}
